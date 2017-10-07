@@ -1,5 +1,10 @@
 - clean: ['~']
 
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - link:
     ~/.profile: profile
     ~/.bash_profile: bash_profile
@@ -18,5 +23,24 @@
     ~/.config/i3:
         path: config/i3/
         create: true
+    ~/.xbindkeysrc: xbindkeysrc
+    ~/.bash_prompt: bash_prompt
+    ~/.dircolors: dircolors
+    ~/.i3blocks.conf: i3blocks.conf
+    ~/.config/termite:
+        path: config/termite/
+        create: true
+    ~/.config/fish:
+        path: config/fish/
+        create: true
+    ~/.vim:
+        path: vim
+        create: true
 
-
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/AUR-builds, Creating AUR Dir]
+  - [mkdir -p ~/Documents, Creating Documents Dir]
+  - [mkdir -p ~/Downloads, Creating Downloads Dir]
+  - [mkdir -p ~/Pictures, Creating Pictures Dir]
+  - [mkdir -p ~/Projects, Creating Projects Dir]
