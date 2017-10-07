@@ -135,9 +135,9 @@ export TLDR_CACHE_MAX_AGE=720
 
 export SHELL=/usr/bin/fish
 
-if -d $HOME/.local/bin/
+if test -d $HOME/.local/bin/
     set -gx PATH $PATH $HOME/.local/bin/
 end
-if -d $HOME/Projects/uPy/esp-open-sdk/xtensa-lx106-elf/bin/
+if test -d $HOME/Projects/uPy/esp-open-sdk/xtensa-lx106-elf/bin/
     set -gx PATH $PATH $HOME/Projects/uPy/esp-open-sdk/xtensa-lx106-elf/bin/
 end
