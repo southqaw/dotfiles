@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [[ $UID -ne 0 ]];then
+    echo "Please run as root."
+    exit 1
+fi
+
+ARG=$1
+
+if [[ $ARG -ne 0 ]] && [[ $ARG -ne 1 ]]; then
+    echo "Invalid argument. Please use 0 for off, and 1 for on."
+    exit 2
+fi
+
+echo $ARG > /sys/devices/platform/thinkpad_acpi/bluetooth_enable
+

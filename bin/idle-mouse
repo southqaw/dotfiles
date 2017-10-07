@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+X=1
+Y=1
+TIME="3s"
+while [ true ]; do
+    xdotool mousemove_relative $X $Y
+    sleep $TIME
+    xdotool mousemove_relative -- -$X $Y
+    sleep $TIME
+    xdotool mousemove_relative -- -$X -$Y
+    sleep $TIME
+    xdotool mousemove_relative -- $X -$Y
+    sleep $TIME
+done

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+
+git pull --recurse-submodules
+# or
+git submodule foreach git pull
+
+git submodule update --recursive
+
+

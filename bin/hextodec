@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+INPUT="0"
+
+while true; do
+    read -p "Input  : " INPUT
+    if [[ $INPUT == "X" ]]; then
+        exit 0
+    fi
+    if [[ "$INPUT" =~ ^([0-9A-Fa-f]) ]]; then
+        echo "Output : $((0x$INPUT))"
+    else
+        echo "Invalid Hex"
+    fi
+done

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+MAC=e0:cb:4e:5f:c0:b4
+
+wol $MAC
