@@ -27,6 +27,9 @@
     ~/.bash_prompt: bash_prompt
     ~/.dircolors: dircolors
     ~/.i3blocks.conf: i3blocks.conf
+    ~/.i3blocks-scripts:
+        path: i3blocks-scripts
+        create: true
     ~/.config/termite:
         path: config/termite/
         create: true
