@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vim-windowswap"]
 	path = vim/bundle/vim-windowswap
 	url = https://github.com/wesQ3/vim-windowswap
+[submodule "etc/i3-alternating-layout"]
+	path = etc/i3-alternating-layout
+	url = https://github.com/olemartinorg/i3-alternating-layout.git

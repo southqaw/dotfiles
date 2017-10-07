@@ -36,6 +36,9 @@
     ~/.vim:
         path: vim
         create: true
+    ~/.etc:
+        path: etc
+        create: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -2,7 +2,7 @@
 	ui = true
 [user]
 	name = Klint Youngmeyer
-	email = kyoungmeyer@emacinc.com
+	email = southqaw@gmail.com
 [push]
 	default = current
 [alias]
@@ -19,4 +19,4 @@
     graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
     precommit = diff --cached --diff-algorithm=minimal -w
 [core]
-	excludesfile = /home/kyoungmeyer/.gitignore
+	excludesfile = ~/.gitignore

@@ -201,7 +201,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#set $Locker i3lock -i /home/klint/Pictures/Backgrounds/arch-solarized.png && sleep 1
+#set $Locker i3lock -i ~/Pictures/Backgrounds/arch-solarized.png && sleep 1
 set $Locker lock.sh ~/.i3/lock-icon.png
 
 set $mode_system System (l) lock, (e) logout, (s) suspend,(h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -248,4 +248,4 @@ client.focused_inactive #369be2 #269be2 #eee8d5 #6c71c4
 client.unfocused #369be2 #269be2 #073642 #586e75
 client.urgent #cb4b16 #dc322f #fdf6e3 #dc322f
 
-exec --no-startup-id /home/klint/.etc/i3-alternating-layout/alternating_layouts.py
+exec --no-startup-id ~/.etc/i3-alternating-layout/alternating_layouts.py

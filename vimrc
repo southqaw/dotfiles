@@ -342,7 +342,7 @@ let g:syntastic_cpp_auto_refresh_includes = 1
 let g:easytags_async=1
 let g:easytags_auto_highlight=0
 
-set rtp+=/home/kyoungmeyer/.local/lib/python2.7/site-packages/powerline/bindings/vim
+set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
