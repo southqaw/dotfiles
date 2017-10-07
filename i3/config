@@ -21,7 +21,8 @@ smart_gaps on
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Droid Sans Mono Slashed for Powerline 9
+font pango:Source Code Pro 9
+font pango:PowerlineSymbols 9
 #font pango:DejaVu Sans Mono 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -223,7 +224,7 @@ bindsym $mod+Pause mode "$mode_system"
 # finds out, if available)
 bar {
 	status_command i3blocks
-    font pango:Droid Sans Mono Slashed for Powerline 9
+    font pango:Source Code Pro 9
 	colors {
 		separator #859900
 		background #002b36
