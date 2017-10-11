@@ -76,3 +76,6 @@
 [submodule "etc/i3-alternating-layout"]
 	path = etc/i3-alternating-layout
 	url = https://github.com/olemartinorg/i3-alternating-layout.git
+[submodule "vim/bundle/vim-minimap"]
+	path = vim/bundle/vim-minimap
+	url = https://github.com/severin-lemaignan/vim-minimap.git
