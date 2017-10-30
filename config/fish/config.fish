@@ -1,7 +1,7 @@
 set -U EDITOR vim
 
 if [ -f $HOME/.config/fish/functions/solarized.fish ]
-	source $HOME/.config/fish/functions/solarized.fish    
+	. $HOME/.config/fish/functions/solarized.fish    
 end
 
 set fish_greeting
@@ -116,24 +116,24 @@ set -x GOPATH $HOME/Code/Other_Projects/go-code
 
 # Load aliases
 if [ -f $HOME/.config/fish/aliases.fish ]
-	source $HOME/.config/fish/aliases.fish    
+	. $HOME/.config/fish/aliases.fish    
 end
 
 # Load nice colors
 if [ -f $HOME/.config/fish/functions/dircolors.fish ]
-	source $HOME/.config/fish/functions/dircolors.fish
+	. $HOME/.config/fish/functions/dircolors.fish
 end
 # TLDR color defines
-export TLDR_COLOR_BLANK="white"
-export TLDR_COLOR_NAME="cyan"
-export TLDR_COLOR_DESCRIPTION="white"
-export TLDR_COLOR_EXAMPLE="green"
-export TLDR_COLOR_COMMAND="red"
-export TLDR_COLOR_PARAMETER="white"
-export TLDR_CACHE_ENABLED=1
-export TLDR_CACHE_MAX_AGE=720
+set -gx TLDR_COLOR_BLANK="white"
+set -gx TLDR_COLOR_NAME="cyan"
+set -gx TLDR_COLOR_DESCRIPTION="white"
+set -gx TLDR_COLOR_EXAMPLE="green"
+set -gx TLDR_COLOR_COMMAND="red"
+set -gx TLDR_COLOR_PARAMETER="white"
+set -gx TLDR_CACHE_ENABLED=1
+set -gx TLDR_CACHE_MAX_AGE=720
 
-export SHELL=/usr/bin/fish
+set -gx SHELL=/usr/bin/fish
 
 if test -d $HOME/.local/bin/
     set -gx PATH $PATH $HOME/.local/bin/
