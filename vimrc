@@ -343,9 +343,15 @@ let g:easytags_async=1
 let g:easytags_auto_highlight=0
 
 set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+if has('python3')
+    python3 from powerline.vim import setup as powerline_setup
+    python3 powerline_setup()
+    python3 del powerline_setup
+elseif has('python')
+    python from powerline.vim import setup as powerline_setup
+    python powerline_setup()
+    python del powerline_setup
+endif
 syntax enable
 set background=dark
 let g:solarized_termcolors=16
