@@ -23,6 +23,9 @@
     ~/.config/i3:
         path: config/i3
         create: true
+    ~/.config/rofi:
+        path: rofi
+        create: true
     ~/.xbindkeysrc: xbindkeysrc
     ~/.bash_prompt: bash_prompt
     ~/.dircolors: dircolors
