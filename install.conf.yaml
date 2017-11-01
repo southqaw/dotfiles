@@ -21,7 +21,7 @@
         path: i3/
         create: true
     ~/.config/i3:
-        path: config/i3/
+        path: config/i3
         create: true
     ~/.xbindkeysrc: xbindkeysrc
     ~/.bash_prompt: bash_prompt
@@ -31,10 +31,10 @@
         path: i3blocks-scripts
         create: true
     ~/.config/termite:
-        path: config/termite/
+        path: config/termite
         create: true
     ~/.config/fish:
-        path: config/fish/
+        path: config/fish
         create: true
     ~/.vim:
         path: vim
