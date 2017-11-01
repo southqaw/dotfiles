@@ -13,12 +13,12 @@
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
     ~/bin:
-        path: bin/
+        path: bin
         create: true
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
     ~/.i3:
-        path: i3/
+        path: i3
         create: true
     ~/.config/i3:
         path: config/i3
