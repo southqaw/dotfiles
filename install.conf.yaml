@@ -17,11 +17,8 @@
         create: true
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
-    ~/.i3:
-        path: i3
-        create: true
     ~/.config/i3:
-        path: config/i3
+        path: i3
         create: true
     ~/.config/rofi:
         path: rofi
@@ -34,10 +31,10 @@
         path: i3blocks-scripts
         create: true
     ~/.config/termite:
-        path: config/termite
+        path: termite
         create: true
     ~/.config/fish:
-        path: config/fish
+        path: fish
         create: true
     ~/.vim:
         path: vim
