@@ -40,11 +40,11 @@
 ## Volume controls
 
 # Increase volume
-"amixer set Master 3+; pkill -RTMIN+1 i3blocks"
+"amixer set Master 1db+; pkill -RTMIN+1 i3blocks"
  	XF86AudioRaiseVolume
 
 # Decrease volume
-"amixer set Master 3-; pkill -RTMIN+1 i3blocks"
+"amixer set Master 1db-; pkill -RTMIN+1 i3blocks"
 	XF86AudioLowerVolume	
 
 # Mute volume
