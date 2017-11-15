@@ -36,6 +36,9 @@
     ~/.config/fish:
         path: fish
         create: true
+    ~/.config/dunst:
+        path: dunst
+        create: true
     ~/.vim:
         path: vim
         create: true
