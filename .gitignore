@@ -2,3 +2,6 @@ fishd.*
 fish_history
 *.sw*
 ack
+ranger/bookmarks
+ranger/history
+ranger/tagged
