@@ -321,7 +321,7 @@ format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.yellow}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${colors.orange}
+format-discharging-underline = ${colors.blue}
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
