@@ -55,6 +55,10 @@
     ~/.config/ranger:
         path: ranger
         create: true
+    ~/.tmux:
+        path: tmux
+        create: true
+    ~/.tmux.conf: tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

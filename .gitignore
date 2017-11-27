@@ -5,3 +5,4 @@ ack
 ranger/bookmarks
 ranger/history
 ranger/tagged
+tmux/plugins/tmux-*

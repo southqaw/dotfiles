@@ -79,3 +79,6 @@
 [submodule "vim/bundle/vim-minimap"]
 	path = vim/bundle/vim-minimap
 	url = https://github.com/severin-lemaignan/vim-minimap.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
