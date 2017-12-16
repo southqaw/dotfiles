@@ -62,6 +62,9 @@
     ~/.config/powerline:
         path: powerline
         create: true
+    ~/.config/trizen:
+        path: trizen
+        create: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
