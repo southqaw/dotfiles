@@ -1,0 +1,40 @@
+{
+    "segments": {
+        "right": [
+            {
+                "type": "string",
+                "name": "independant_separator",
+                "highlight_groups": ["background:divider", "background"]
+            },
+            {
+				"function": "powerline.segments.common.sys.uptime",
+                "priority": 50
+            },
+            {
+                "function": "powerline.segments.common.net.network_load",
+                "priority": 50
+            },
+            {
+                "function": "powerline.segments.common.wthr.weather",
+                "priority": 50,
+                "args": {
+                    "unit": "F",
+                    "location_query": "63128"
+                }
+            },
+            {
+                "function": "powerline.segments.common.time.date"
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "args": {
+                    "format": "%H:%M",
+                    "istime": true
+                }
+            },
+            {
+                "function": "powerline.segments.common.net.hostname"
+            }
+        ]
+    }
+}

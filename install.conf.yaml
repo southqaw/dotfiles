@@ -59,6 +59,9 @@
         path: tmux
         create: true
     ~/.tmux.conf: tmux.conf
+    ~/.config/powerline:
+        path: powerline
+        create: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
