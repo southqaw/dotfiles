@@ -1,6 +1,21 @@
 #!/bin/python
 
 import i3
+import subprocess
+
+def get_size():
+    cmd = ['xrandr']
+    cmd2 = ['grep', '*']
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    p2 = subprocess.Popen(cmd2, stdin=p.stdout, stdout=subprocess.PIPE)
+    p.stdout.close()
+    
+    resolution_string, junk = p2.communicate()
+    resolution = resolution_string.split()[0]
+    width, height = resolution.split(b'x')
+    width = int(width)
+    height = int(height)
+    return int(height*0.925)
 
 def find_tmp():
     tmps = i3.filter(nodes=[], window=None, name=None)
@@ -17,9 +32,10 @@ def destroy_tmp(tmp_id):
     i3.kill(con_id=tmp_id)
 
 def make_float(current_id):
+    size = get_size()
     i3.focus(con_id=current_id)
     i3.floating('enable')
-    i3.resize('set 1000 1000')
+    i3.resize('set {} {}'.format(size, size))
     i3.move('position center')
 
 def make_unfloat(current_id):
