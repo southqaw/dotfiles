@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+CURRENT_BACKGROUND=~/.config/current-background.png
+
+if [[ -f $1 ]]; then
+    IMAGE=$(realpath $1)
+    rm "$CURRENT_BACKGROUND"
+    ln -s "$IMAGE" "$CURRENT_BACKGROUND"
+    feh --bg-fill "$CURRENT_BACKGROUND"
+else
+    echo "Please provide a valid path to an image"
+    exit 1
+fi
