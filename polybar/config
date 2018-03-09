@@ -66,7 +66,7 @@ modules-left = i3
 modules-center = date
 ;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 ;modules-right = volume memory cpu wlan eth battery temperature date powermenubarlauncher
-modules-right = volume wlan eth battery powermenubarlauncher
+modules-right = volume wlan eth battery cpu memory powermenubarlauncher
 
 tray-position = right
 tray-padding = 0
@@ -239,10 +239,10 @@ format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.green}
 label-connected = %essid%
 
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.red}
-label-disconnected = 
-label-disconnected-foreground = ${colors.red}
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${colors.red}
+;label-disconnected = 
+;label-disconnected-foreground = ${colors.red}
 
 ramp-signal-0 = ""
 ramp-signal-1 = ""
@@ -262,10 +262,10 @@ format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 ;format-disconnected =
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.red}
-label-disconnected = 
-label-disconnected-foreground = ${colors.red}
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${colors.red}
+;label-disconnected = 
+;label-disconnected-foreground = ${colors.red}
 
 [module/date]
 type = internal/date
