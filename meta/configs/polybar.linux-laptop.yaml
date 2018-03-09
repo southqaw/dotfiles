@@ -1,0 +1,3 @@
+- link:
+    ~/.config/polybar/config: polybar/config.linux-laptop
+    ~/.config/polybar/launch.sh: polybar/launch.sh

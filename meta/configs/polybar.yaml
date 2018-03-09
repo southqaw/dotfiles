@@ -1,4 +1,0 @@
-- link:
-    ~/.config/polybar:
-        path: polybar
-        create: true

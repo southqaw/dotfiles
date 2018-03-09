@@ -1,4 +1,0 @@
-- link:
-    ~/.config/rofi:
-        path: rofi
-        create: true

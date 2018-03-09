@@ -1,4 +1,4 @@
 - link:
     ~/.Xresources: Xresources
-    ~/.xinitrc: xinitrc
+    ~/.xinitrc: xinitrc.i3
     ~/.xbindkeysrc: xbindkeysrc
