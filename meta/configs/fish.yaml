@@ -1,0 +1,4 @@
+- link:
+    ~/.config/fish:
+        path: fish
+        create: true

@@ -1,0 +1,4 @@
+- link:
+    ~/.config/dunst:
+        path: dunst
+        create: true

@@ -1,0 +1,5 @@
+- link:
+    ~/.tmux:
+        path: tmux
+        create: true
+    ~/.tmux.conf: tmux.conf

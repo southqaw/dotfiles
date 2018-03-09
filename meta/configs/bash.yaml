@@ -1,0 +1,7 @@
+- link:
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.bash_prompt: bash_prompt
+    ~/.dircolors: dircolors

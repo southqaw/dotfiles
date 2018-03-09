@@ -1,0 +1,4 @@
+- link:
+    ~/.config/termite:
+        path: termite
+        create: true

@@ -1,0 +1,4 @@
+- link:
+    ~/.config/powerline:
+        path: powerline
+        create: true

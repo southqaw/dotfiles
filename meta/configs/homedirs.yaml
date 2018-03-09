@@ -1,0 +1,6 @@
+- shell:
+  - [mkdir -p ~/AUR-builds, Creating AUR Dir]
+  - [mkdir -p ~/Documents, Creating Documents Dir]
+  - [mkdir -p ~/Downloads, Creating Downloads Dir]
+  - [mkdir -p ~/Pictures, Creating Pictures Dir]
+  - [mkdir -p ~/Projects, Creating Projects Dir]
