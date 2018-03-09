@@ -1,5 +1,5 @@
 [submodule "dotbot"]
-	path = dotbot
+	path = meta/dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "vim/colors/base16-vim"]
 	path = vim/colors/base16-vim
@@ -74,7 +74,7 @@
 	path = vim/bundle/vim-windowswap
 	url = https://github.com/wesQ3/vim-windowswap
 [submodule "etc/i3-alternating-layout"]
-	path = etc/i3-alternating-layout
+	path = i3/i3-alternating-layout
 	url = https://github.com/olemartinorg/i3-alternating-layout.git
 [submodule "vim/bundle/vim-minimap"]
 	path = vim/bundle/vim-minimap

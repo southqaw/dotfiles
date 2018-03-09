@@ -269,4 +269,4 @@ client.focused_inactive #369be2 #269be2 #eee8d5 #6c71c4
 client.unfocused #369be2 #269be2 #073642 #586e75
 client.urgent #cb4b16 #dc322f #fdf6e3 #dc322f
 
-exec_always --no-startup-id ~/.etc/i3-alternating-layout/alternating_layouts.py
+exec_always --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py
