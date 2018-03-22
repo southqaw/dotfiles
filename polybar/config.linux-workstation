@@ -59,7 +59,7 @@ font-0 = SauceCodePro Nerd Font:size=9;2
 
 modules-left = i3
 modules-center = date
-modules-right = volume eth temperature cpu memory powermenubarlauncher
+modules-right = updates-arch-combined volume eth isrunning-openvpn temperature cpu memory powermenubarlauncher
 
 tray-position = right
 tray-padding = 0
@@ -272,9 +272,9 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 80
 
-format = <ramp> <label>
+format = <ramp><label>
 format-underline = ${colors.orange}
-format-warn = <ramp> <label-warn>
+format-warn = <ramp><label-warn>
 format-warn-underline = ${colors.red}
 
 label = %temperature%
@@ -286,6 +286,18 @@ ramp-1 = ""
 ramp-2 = ""
 ramp-3 = " "
 ramp-foreground = ${colors.foreground-alt}
+
+[module/isrunning-openvpn]
+type = custom/script
+exec = ~/.config/polybar/scripts/isrunning-openvpn.sh
+interval = 5
+format-underline = ${colors.green}
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates-arch-combined.sh
+interval = 600
+format-underline = ${colors.red}
 
 [module/powermenu]
 type = custom/menu
