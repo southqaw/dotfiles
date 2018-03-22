@@ -1,0 +1,9 @@
+rofi.theme: solarized
+#rofi.lines: 5
+#rofi.width: 100
+rofi.modi: window,run,drun
+rofi.terminal: termite 
+rofi.case-sensitive: false
+#rofi.eh: 2
+#rofi.padding: 340
+rofi.hide-scrollbar: true
