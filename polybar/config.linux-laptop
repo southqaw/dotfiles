@@ -59,7 +59,7 @@ font-0 = SauceCodePro Nerd Font:size=9;2
 
 modules-left = i3
 modules-center = date
-modules-right = volume wlan eth battery cpu memory powermenubarlauncher
+modules-right = updates-arch-combined volume wlan eth battery cpu memory powermenubarlauncher
 
 tray-position = right
 tray-padding = 0
