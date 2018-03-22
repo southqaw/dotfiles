@@ -24,6 +24,7 @@ au BufRead /tmp/mutt-* set tw=72
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
+set encoding=UTF-8
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -342,7 +343,7 @@ let g:syntastic_cpp_auto_refresh_includes = 1
 let g:easytags_async=1
 let g:easytags_auto_highlight=0
 
-set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+"set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 if has('python3')
     python3 from powerline.vim import setup as powerline_setup
     python3 powerline_setup()

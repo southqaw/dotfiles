@@ -8,13 +8,11 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #002b36
 background-alt = #073642
 background-light = #fdf6e3
 background-light-alt = #eee8d5
 
-;foreground = ${xrdb:color7:#222}
 foreground = #93a1a1
 foreground-alt = #839496
 
@@ -57,15 +55,10 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Source Code Pro:size=9;2
-font-1 = material\-wifi:size=11:antialias=true;2
-font-2 = Material Icons:size=11:antialias=true;3
-font-3 = Font Awesome:size=9:antialias=false;0
+font-0 = SauceCodePro Nerd Font:size=9;2
 
 modules-left = i3
 modules-center = date
-;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
-;modules-right = volume memory cpu wlan eth battery temperature date powermenubarlauncher
 modules-right = volume wlan eth battery cpu memory powermenubarlauncher
 
 tray-position = right
@@ -73,13 +66,9 @@ tray-padding = 0
 ;tray-transparent = true
 tray-background = ${colors.background}
 
-;wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -114,43 +103,11 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-#[module/bspwm]
-#type = internal/bspwm
-#
-#label-focused = %index%
-#label-focused-background = ${colors.background-alt}
-#label-focused-underline= ${colors.green}
-#label-focused-padding = 2
-#
-#label-occupied = %index%
-#label-occupied-padding = 2
-#
-#label-urgent = %index%!
-#label-urgent-background = ${colors.alert}
-#label-urgent-padding = 2
-#
-#label-empty = %index%
-#label-empty-foreground = ${colors.foreground-alt}
-#label-empty-padding = 2
-
 [module/i3]
 type = internal/i3
 strip-wsnumbers = false
 index-sort = true
 wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
-;ws-icon-0 = 1;1:
-;ws-icon-1 = 2;2:
-;ws-icon-2 = 3;3:
-;ws-icon-3 = 4;4:
-;ws-icon-4 = 5;5:
-;ws-icon-5 = 6;6:
-;ws-icon-6 = 7;7:
-;ws-icon-7 = 8;8:
-;ws-icon-8 = 9;9:
-;ws-icon-9 = 10;10:
 
 format = <label-mode> <label-state> <label-mode>
 label-mode = %mode%
@@ -217,17 +174,17 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.yellow}
 label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = ${colors.magenta}
 label = %percentage_used%%
 
 [module/wlan]
@@ -235,37 +192,30 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
 format-connected-underline = ${colors.green}
-label-connected = %essid%
+label-connected = " 直%essid%"
 
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${colors.red}
-;label-disconnected = 
-;label-disconnected-foreground = ${colors.red}
-
-ramp-signal-0 = ""
-ramp-signal-1 = ""
-ramp-signal-2 = ""
-ramp-signal-3 = ""
-ramp-signal-4 = ""
-ramp-signal-foreground = ${colors.foreground-alt}
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.red}
+label-disconnected = " 睊"
+label-disconnected-foreground = ${colors.red}
 
 [module/eth]
 type = internal/network
 interface = enp0s25
 interval = 3.0
 
-format-connected-underline = {colors.blue}
-format-connected-prefix = ""
+format-connected-underline = ${colors.blue}
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 ;format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${colors.red}
-;label-disconnected = 
-;label-disconnected-foreground = ${colors.red}
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.red}
+label-disconnected = " "
+label-disconnected-foreground = ${colors.red}
 
 [module/date]
 type = internal/date
@@ -277,7 +227,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.violet}
 
@@ -291,14 +241,14 @@ label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
 format-volume-underline = ${colors.cyan}
 
-label-muted =  muted
+label-muted = " 婢Mute"
 label-muted-foreground = ${colors.red}
 format-muted-underline = ${colors.cyan}
 
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -329,22 +279,22 @@ format-charging-underline = ${colors.yellow}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${colors.blue}
 
-format-full-prefix = ""
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${colors.green}
 
-ramp-capacity-0 = ""
-ramp-capacity-1 = ""
-ramp-capacity-2 = ""
-ramp-capacity-3 = ""
-ramp-capacity-4 = ""
-ramp-capacity-5 = ""
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+ramp-capacity-5 = " "
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = ""
-animation-charging-1 = ""
-animation-charging-2 = ""
-animation-charging-3 = ""
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
@@ -354,19 +304,18 @@ thermal-zone = 0
 warn-temperature = 80
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = ${colors.orange}
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-underline = ${colors.red}
 
 label = %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.red}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-0 = ""
+ramp-1 = ""
+ramp-2 = ""
+ramp-3 = " "
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
@@ -374,9 +323,9 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = " "
+label-open = "  "
 label-open-foreground = ${colors.red}
-label-close = " cancel"
+label-close = "  cancel"
 label-close-foreground = ${colors.red}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -398,7 +347,7 @@ menu-2-1-exec = menu-open-0
 
 [module/powermenubarlauncher]
 type = custom/text
-content = "%{F#dc322f} %{F-}"
+content = "%{F#dc322f}  %{F-}"
 click-left = polybar powermenubar
 
 [bar/powermenubar]
@@ -418,17 +367,14 @@ border-color = #00000000
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 0
+module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Source Code Pro:size=9;2
-font-1 = material\-wifi:size=11:antialias=true;2
-font-2 = Material Icons:size=11:antialias=true;3
-font-3 = Font Awesome:size=9:antialias=false;0
+font-0 = SauceCodePro Nerd Font:size=9;2
 
 radius = 0
-offset-x = 825
-offset-y = 27
+offset-x = 1145
+offset-y = 28
 bottom = true
 
 
@@ -437,42 +383,39 @@ modules-center = lock logout suspend reboot poweroff closepowermenubar
 override-redirect = true
 wm-restack = true
 
-
-
-
 [module/lock]
 type = custom/text
-content = "%{F#2aa198} %{F-}Lock"
+content = "%{F#2aa198} %{F-}Lock"
 click-left = "pkill -n polybar ; sh ~/bin/lock.sh ~/.config/i3/lock-icon.png"
 
 
 [module/suspend]
 type = custom/text
-content = "%{F#b58900} %{F-}Suspend"
+content = "%{F#b58900}⏾ %{F-}Suspend"
 click-left = "pkill -n polybar ; sh ~/bin/lock.sh ~/.config/i3/lock-icon.png ;systemctl suspend"
 
 
 [module/logout]
 type = custom/text
-content = "%{F#b58900} %{F-}Logout"
+content = "%{F#b58900} %{F-}Logout"
 click-left = "pkill -n polybar ; i3-msg exit"
 
 
 [module/reboot]
 type = custom/text
-content = "%{F#cb4b16} %{F-}Reboot"
+content = "%{F#cb4b16}勒 %{F-}Reboot"
 click-left = "pkill -n polybar ; systemctl reboot"
 
 
 [module/poweroff]
 type = custom/text
-content = "%{F#dc322f} %{F-}Poweroff"
+content = "%{F#dc322f} %{F-}Poweroff"
 click-left = "pkill -n polybar ; systemctl poweroff"
 
 
 [module/closepowermenubar]
 type = custom/text
-content = "%{F#2aa198} %{F-}Cancel"
+content = "%{F#2aa198}ﰸ %{F-}Cancel"
 click-left = "pkill -n polybar"
 
 [settings]
