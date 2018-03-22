@@ -214,7 +214,7 @@ label-connected = %local_ip%
 ;format-disconnected =
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.red}
-label-disconnected = " "
+label-disconnected =
 label-disconnected-foreground = ${colors.red}
 
 [module/date]
@@ -373,8 +373,8 @@ module-margin-right = 1
 font-0 = SauceCodePro Nerd Font:size=9;2
 
 radius = 0
-offset-x = 1145
-offset-y = 28
+offset-x = 825
+offset-y = 27
 bottom = true
 
 
