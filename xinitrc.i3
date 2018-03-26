@@ -41,6 +41,8 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 # Set Desktop background
 sh ~/bin/.fehbg ~/.config/current-background.png &
+#xrandr --output VGA-1 --left-of DVI-I-1
+xset s 3600 3600
 # Enable Key Shortcuts
 xbindkeys
 exec i3
