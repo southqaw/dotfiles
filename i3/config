@@ -21,7 +21,7 @@ gaps outer 0
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Sauce Code Pro Nerd Font Complete Mono 9
+font pango:SauceCodePro Nerd Font Mono 9
 #font pango:Source Code Pro 9
 #font pango:PowerlineSymbols 9
 #font pango:DejaVu Sans Mono 8

@@ -40,4 +40,4 @@ set recolor-lightcolor          "#073642" # base02
 set recolor-darkcolor           "#93a1a1" # base1
 # set recolor-keephue             true      # keep original color
 
-set font "Source Code Sans 9"
+set font "Source Sans Pro 9"

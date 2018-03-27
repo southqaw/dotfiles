@@ -43,6 +43,7 @@ fi
 sh ~/bin/.fehbg ~/.config/current-background.png &
 #xrandr --output VGA-1 --left-of DVI-I-1
 xset s 3600 3600
+xset s off -dpms
 # Enable Key Shortcuts
 xbindkeys
 exec i3
