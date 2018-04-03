@@ -6,7 +6,7 @@ convert /tmp/screen.png -scale 10% -scale 1000% /tmp/screen.png
 #i3lock -u -i /tmp/screen.png -e
 pkill -u $USER -USR1 dunst
 # uses i3lock-color-git from the AUR
-i3lock -n -i /tmp/screen.png \
+i3lock -i /tmp/screen.png \
     --insidecolor=073642ff --ringcolor=eee8d5ff --line-uses-inside \
     --keyhlcolor=268bd2ff --bshlcolor=6c71c4ff --separatorcolor=00000000 \
     --insidevercolor=b58900ff --insidewrongcolor=dc322fff \

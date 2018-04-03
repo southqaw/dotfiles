@@ -332,6 +332,7 @@ content = "%{F#dc322f}  %{F-}"
 click-left = polybar powermenubar
 
 [bar/powermenubar]
+monitor = ${env:MONITOR:DVI-I-1}
 width = 448
 height = 21
 ;offset-x = 1%
