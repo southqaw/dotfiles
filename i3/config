@@ -115,6 +115,10 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# Screenshot utilities. Requires 'maim' and 'xclip' packages.
+bindsym --release $mod+p exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+p exec maim ~/Pictures/Screenshots/(date +%s).png
+
 # focus the child container
 #bindsym $mod+d focus child
 #set $WS1    "1:  Shell "
