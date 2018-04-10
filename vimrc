@@ -67,6 +67,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Show partial commands in the last line of the screen
+map <space> <leader>
 set showcmd
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
@@ -240,14 +241,14 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
     set t_Co=256
 endif
 
-nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
+nnoremap <leader>zz :let &scrolloff=999-&scrolloff<CR>
 
 nnoremap <silent> <leader>k :SetLinuxFormatting<cr><cr>
 
-map <Leader>l :setlocal number!<CR>
-map <Leader>o :set paste!<CR>
+map <leader>l :setlocal number!<CR>
+map <leader>o :set paste!<CR>
 
-map <Leader>e :NERDTreeTabsToggle<CR>
+map <leader>e :NERDTreeTabsToggle<CR>
 
 map <F6> :tabp<CR>
 map <F7> :tabn<CR>
@@ -282,43 +283,12 @@ let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 
-"Set shortcuts for most frequently used commands
-nnoremap <leader>2 :Accordion 2<CR>
-nnoremap <leader>3 :Accordion 3<CR>
-noremap <leader>0 :AccordionStop<CR>
-"More shortcuts, without a good available <C-w> option
-nnoremap <leader>d :AccordionDiff<CR>
-nnoremap <leader>= :AccordionZoomIn<CR>
-nnoremap <leader>- :AccordionZoomOut<CR>
-
 "Change forward/back slashes
-nnoremap <silent> <Leader>/ :let tmp=@/<Bar>s:\\:/:ge<Bar>let @/=tmp<Bar>noh<CR>
-nnoremap <silent> <Leader><Bslash> :let tmp=@/<Bar>s:/:\\:ge<Bar>let @/=tmp<Bar>noh<CR>
-
-"Vimux Keybindings
-" Run the current file with rspec
-map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
-
-" Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
-
-" Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
-
-" Inspect runner pane
-map <Leader>vi :VimuxInspectRunner<CR>
-
-" Close vim tmux runner opened by VimuxRunCommand
-map <Leader>vq :VimuxCloseRunner<CR>
-
-" Interrupt any command running in the runner pane
-map <Leader>vx :VimuxInterruptRunner<CR>
-
-" Zoom the runner pane (use <bind-key> z to restore runner pane)
-map <Leader>vz :call VimuxZoomRunner()<CR>
+nnoremap <silent> <leader>/ :let tmp=@/<Bar>s:\\:/:ge<Bar>let @/=tmp<Bar>noh<CR>
+nnoremap <silent> <leader><Bslash> :let tmp=@/<Bar>s:/:\\:ge<Bar>let @/=tmp<Bar>noh<CR>
 
 map ; :CtrlPMixed<CR>
-let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_map = '<leader>t'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
