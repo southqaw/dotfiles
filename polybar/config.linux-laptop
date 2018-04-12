@@ -333,9 +333,10 @@ click-left = xdg-open https://www.archlinux.org/; ~/.config/polybar/scripts/info
 
 [module/gmail]
 type = custom/script
-exec = ~/.config/polybar/gmail/launch.py --color '#cb4b16' --prefix ' '
+exec = ~/.config/polybar/gmail/launch.py --color '#cb4b16' --prefix '  '
 tail = true
 click-left = xdg-open https://inbox.google.com
+format-underline = ${colors.orange}
 
 [module/powermenu]
 type = custom/menu
