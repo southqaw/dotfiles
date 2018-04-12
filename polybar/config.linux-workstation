@@ -59,7 +59,7 @@ font-0 = SauceCodePro Nerd Font:size=9;2
 
 modules-left = i3
 modules-center = date
-modules-right = updates-arch-combined volume eth isrunning-openvpn temperature cpu memory powermenubarlauncher
+modules-right = info-archnews-notify updates-arch-combined volume eth isrunning-openvpn temperature cpu memory powermenubarlauncher
 
 tray-position = right
 tray-padding = 0
@@ -298,6 +298,13 @@ type = custom/script
 exec = ~/.config/polybar/scripts/updates-arch-combined.sh
 interval = 600
 format-underline = ${colors.red}
+
+[module/info-archnews-notify]
+type = custom/script
+exec = ~/.config/polybar/scripts/info-archnews-notify.py
+interval = 600
+format-underline = ${colors.red}
+click-left = chromium https://www.archlinux.org/; ~/.config/polybar/scripts/info-archnews-notify.py -u
 
 [module/powermenu]
 type = custom/menu
