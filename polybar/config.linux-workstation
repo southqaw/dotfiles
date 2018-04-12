@@ -304,7 +304,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/info-archnews-notify.py
 interval = 600
 format-underline = ${colors.red}
-click-left = chromium https://www.archlinux.org/; ~/.config/polybar/scripts/info-archnews-notify.py -u
+click-left = xdg-open https://www.archlinux.org/; ~/.config/polybar/scripts/info-archnews-notify.py -u
 
 [module/powermenu]
 type = custom/menu
