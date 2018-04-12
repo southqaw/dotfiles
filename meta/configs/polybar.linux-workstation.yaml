@@ -4,3 +4,6 @@
     ~/.config/polybar/scripts:
         path: polybar/scripts
         create: true
+    ~/.config/polybar/gmail:
+        path: polybar/gmail
+        create: true

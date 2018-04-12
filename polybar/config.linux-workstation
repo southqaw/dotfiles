@@ -59,7 +59,7 @@ font-0 = SauceCodePro Nerd Font:size=9;2
 
 modules-left = i3
 modules-center = date
-modules-right = info-archnews-notify updates-arch-combined volume eth isrunning-openvpn temperature cpu memory powermenubarlauncher
+modules-right = info-archnews-notify updates-arch-combined volume eth isrunning-openvpn temperature cpu memory gmail powermenubarlauncher
 
 tray-position = right
 tray-padding = 0
@@ -305,6 +305,12 @@ exec = ~/.config/polybar/scripts/info-archnews-notify.py
 interval = 600
 format-underline = ${colors.red}
 click-left = xdg-open https://www.archlinux.org/; ~/.config/polybar/scripts/info-archnews-notify.py -u
+
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/gmail/launch.py --color '#cb4b16' --prefix ' '
+tail = true
+click-left = xdg-open https://inbox.google.com
 
 [module/powermenu]
 type = custom/menu
