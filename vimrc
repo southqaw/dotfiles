@@ -296,19 +296,31 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 0
 
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open = 1
-let g:syntastic_loc_list_height=3
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_c_include_dirs = [ '../include', 'include' ]
-let g:syntastic_c_checkers=['gcc', 'make']
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_checkers=['cpplint']
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_auto_refresh_includes = 1
+let g:ale_linters = {
+\   'c': ['clang', 'clangtidy', 'gcc'],
+\   'python': ['flake8', 'pylint', 'pyflakes'],
+\}
+
+let g:ale_c_clangtidy_checks = ['*','-android-*', '-fuchsia-*', '-hicpp-*', '-llvm-*', '-objc-*', '-zircon-*']
+let g:ale_c_clang_options = '-std=c11 -Wall -Wextra'
+let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra'
+
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_auto_loc_list=1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_loc_list_height=3
+"
+"let g:syntastic_python_checkers=['flake8']
+"let g:syntastic_c_include_dirs = [ '../include', 'include' ]
+"let g:syntastic_c_checkers=['gcc', 'make']
+"let g:syntastic_cpp_compiler = 'g++'
+"let g:syntastic_cpp_checkers=['cpplint']
+"let g:syntastic_cpp_compiler_options = ' -std=c++11'
+"let g:syntastic_cpp_check_header = 1
+"let g:syntastic_cpp_auto_refresh_includes = 1
 
 let g:easytags_async=1
 let g:easytags_auto_highlight=0
