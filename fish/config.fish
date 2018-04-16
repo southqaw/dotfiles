@@ -141,3 +141,7 @@ end
 if test -d $HOME/Projects/uPy/esp-open-sdk/xtensa-lx106-elf/bin/
     set -gx PATH $PATH $HOME/Projects/uPy/esp-open-sdk/xtensa-lx106-elf/bin/
 end
+
+fundle plugin 'edc/bass'
+
+fundle init
