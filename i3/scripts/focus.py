@@ -35,7 +35,7 @@ def make_float(current_id):
     size = get_size()
     i3.focus(con_id=current_id)
     i3.floating('enable')
-    i3.resize('set {} {}'.format(size, size))
+    i3.resize('set {} {}'.format((size + int(size*.56)), size))
     i3.move('position center')
 
 def make_unfloat(current_id):
