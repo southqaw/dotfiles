@@ -298,6 +298,7 @@ let g:ctrlp_switch_buffer = 0
 
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
+let g:ale_echo_msg_format = '[%linter%] %severity%: %s' 
 
 let g:ale_linters = {
 \   'c': ['clang', 'clangtidy', 'gcc'],
@@ -305,8 +306,9 @@ let g:ale_linters = {
 \}
 
 let g:ale_c_clangtidy_checks = ['*','-android-*', '-fuchsia-*', '-hicpp-*', '-llvm-*', '-objc-*', '-zircon-*']
-let g:ale_c_clang_options = '-std=c11 -Wall -Wextra'
-let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra'
+let g:ale_c_clangtidy_options = '-p ../build/ -I../inc/ -I../include/'
+let g:ale_c_clang_options = '-std=gnu11 -Wall -Wextra -I../inc/ -I../include'
+let g:ale_c_gcc_options = '-std=gnu11 -Wall -Wextra -I../inc/ -I../include'
 let g:ale_python_pylint_options = '--disable=no-else-return'
 
 "let g:syntastic_enable_signs = 1
