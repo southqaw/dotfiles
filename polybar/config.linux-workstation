@@ -26,6 +26,8 @@ cyan = #2aa198
 green = #859900
 
 alert = ${colors.red}
+primary = ${colors.green}
+secondary = ${colors.yellow}
 
 [bar/bottom]
 monitor = ${env:MONITOR:DVI-I-1}
@@ -83,15 +85,15 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.red}
+format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.red}
+label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.red}
-label-indicator-underline = ${colors.red}
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -113,12 +115,12 @@ format = <label-mode> <label-state> <label-mode>
 label-mode = %mode%
 label-mode-padding = 1
 label-mode-foreground = #000
-label-mode-background = ${colors.yellow}
+label-mode-background = ${colors.foreground-alt}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.primary}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -128,12 +130,12 @@ label-unfocused-padding = 1
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${colors.background-alt}
-label-visible-underline = ${colors.green}
+label-visible-underline = ${colors.primary}
 label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.magenta}
+label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 [module/mpd]
@@ -176,7 +178,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.yellow}
+format-underline = ${colors.secondary}
 label = %percentage%%
 
 [module/memory]
@@ -184,7 +186,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.magenta}
+format-underline = ${colors.secondary}
 label = %percentage_used%%
 
 ;[module/wlan]
@@ -206,16 +208,16 @@ type = internal/network
 interface = eno1
 interval = 3.0
 
-format-connected-underline = ${colors.blue}
+format-connected-underline = ${colors.secondary}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 ;format-disconnected =
 format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.red}
+format-disconnected-underline = ${colors.alert}
 label-disconnected = " "
-label-disconnected-foreground = ${colors.red}
+label-disconnected-foreground = ${colors.alert}
 
 [module/date]
 type = internal/date
@@ -229,7 +231,7 @@ time-alt = %H:%M:%S
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.violet}
+format-underline = ${colors.secondary}
 
 label = %date% %time%
 
@@ -239,11 +241,11 @@ type = internal/volume
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
-format-volume-underline = ${colors.cyan}
+format-volume-underline = ${colors.secondary}
 
 label-muted = " 婢Mute"
-label-muted-foreground = ${colors.red}
-format-muted-underline = ${colors.cyan}
+label-muted-foreground = ${colors.alert}
+format-muted-underline = ${colors.secondary}
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = " "
@@ -273,13 +275,13 @@ thermal-zone = 0
 warn-temperature = 80
 
 format = <ramp><label>
-format-underline = ${colors.orange}
+format-underline = ${colors.secondary}
 format-warn = <ramp><label-warn>
-format-warn-underline = ${colors.red}
+format-warn-underline = ${colors.alert}
 
 label = %temperature%
 label-warn = %temperature%
-label-warn-foreground = ${colors.red}
+label-warn-foreground = ${colors.alert}
 
 ramp-0 = ""
 ramp-1 = ""
@@ -291,19 +293,19 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/script
 exec = ~/.config/polybar/scripts/isrunning-openvpn.sh
 interval = 5
-format-underline = ${colors.green}
+format-underline = ${colors.secondary}
 
 [module/updates-arch-combined]
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-arch-combined.sh
 interval = 600
-format-underline = ${colors.red}
+format-underline = ${colors.secondary}
 
 [module/info-archnews-notify]
 type = custom/script
 exec = ~/.config/polybar/scripts/info-archnews-notify.py
 interval = 600
-format-underline = ${colors.red}
+format-underline = ${colors.alert}
 click-left = xdg-open https://www.archlinux.org/; ~/.config/polybar/scripts/info-archnews-notify.py -u
 
 [module/gmail]
@@ -311,7 +313,7 @@ type = custom/script
 exec = ~/.config/polybar/gmail/launch.py --color '#cb4b16' --prefix ' '
 tail = true
 click-left = xdg-open https://inbox.google.com
-format-underline = ${colors.orange}
+format-underline = ${colors.secondary}
 
 [module/powermenu]
 type = custom/menu

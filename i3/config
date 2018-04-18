@@ -269,9 +269,19 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #}
 # colors
 #
-client.focused #96a900 #859900 #fdf6e3 #859900
-client.focused_inactive #369be2 #269be2 #eee8d5 #6c71c4
-client.unfocused #369be2 #269be2 #073642 #586e75
-client.urgent #cb4b16 #dc322f #fdf6e3 #dc322f
+set $bg "#002b36"
+set $fg "#fdf6e3"
+set $green "#859900"
+set $blue "#268bd2"
+set $violet "#6c71c4"
+set $red "#dc322f"
+#<colorclass>           <border>    <background>    <text>  <indicator> <child_border>
+client.focused          $green      $bg             $fg     $green      $green 
+client.focused_inactive $violet     $bg             $fg     $violet     $violet
+client.unfocused        $blue       $bg             $fg     $blue       $blue
+client.urgent           $red        $bg             $fg     $red        $red
+client.placeholder      #000000     #0c0c0c         #ffffff #000000     #0c0c0c
+
+client.background       #ffffff
 
 exec_always --no-startup-id ~/.config/i3/i3-alternating-layout/alternating_layouts.py
