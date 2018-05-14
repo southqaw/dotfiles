@@ -7,3 +7,4 @@ ranger/history
 ranger/tagged
 tmux/plugins/tmux-*
 fish/fundle
+fish/functions/fundle.fish

@@ -2,3 +2,5 @@
     ~/.config/fish:
         path: fish
         create: true
+- shell:
+  - ["wget https://git.io/fundle -O ./fish/functions/fundle.fish", Installing Fundle]
